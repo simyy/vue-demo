@@ -1,4 +1,5 @@
 # vue-demo
+> based on [vue-sui-demo](https://github.com/eteplus/vue-sui-demo)
 
 ## 环境
  1. node v5.12.0

@@ -1,6 +1,6 @@
 <template>
   <div class="loader">
-    <!-- <div class="tips">努力加载中...</div> -->
+      <!--<div class="tips">努力加载中...</div>-->
     <div class="pacman">
       <div></div>
       <div></div>
@@ -16,7 +16,7 @@ export default {
   ready () {
     setTimeout(() => {
       this.$route.router.go({path: '/home', replace: true})
-    }, 1500)
+    }, 2000)
   }
 }
 </script>
