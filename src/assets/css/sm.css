@@ -880,6 +880,10 @@ a:active {
   text-align: center;
   white-space: nowrap;
 }
+.title-load {
+    font-size: 0.3rem;
+}
+
 .title a {
   color: inherit;
 }
@@ -1045,6 +1049,9 @@ a:active {
 }
 
 /* === Lists === */
+.list-items {
+    margin-top: 0rem;
+}
 
 .list-block {
   margin: 1.75rem 0;
@@ -1228,7 +1235,7 @@ a:active {
 }
 
 .list-block .item-media img {
-    width: 3rem;
+    width: 2rem;
 }
 .list-block .item-media i + i {
   margin-left: 0.25rem;
@@ -1250,7 +1257,7 @@ a:active {
     -webkit-box-orient: vertical;
     overflow: hidden;*/
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 .list-block .item-desc-content {
   display: -webkit-box;
@@ -1259,7 +1266,7 @@ a:active {
 }
 .list-block .item-desc-item {
   padding-right: 0.35rem;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 .list-block .item-up {
   display: -webkit-box;
@@ -1280,6 +1287,7 @@ a:active {
   padding-top: 1rem;
   padding-right:0.75rem;
   padding-left:0.5rem;
+  font-size: 0.8rem;
 }
 .list-block .item-inner {
   padding-right: 0.75rem;
@@ -1475,7 +1483,7 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after, .
   -webkit-box-orient: vertical;
   display: -webkit-box;
 }
-.list-block.media-list .item-title {
+.list-block.media-list .item-0.8title {
   font-weight: 500;
 }
 .list-block.media-list .item-inner {

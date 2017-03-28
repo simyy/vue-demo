@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <nav class="bar bar-nav">
-      <h1 class="title">滚动加载更多</h1>
+      <p class="title">滚动加载更多</p>
     </nav>
     <div class="content list"
     v-infinite-scroll="loadMore">
-      <div class="list-block infinite-list">
+      <div class="list-block infinite-list list-items">
         <ul>
           <li class="item-content item-content-line" v-for="item in items" track-by="$index">
             <div class="item-media"><img src="../assets/img/avatar.jpg"/></div>
@@ -18,7 +18,7 @@
                 </div>
               </div>
             </div>
-            <div class="item-up">👍</div>
+            <div class="item-up">围观</div>
           </li>
         </ul>
       </div>
