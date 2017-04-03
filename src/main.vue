@@ -2,10 +2,7 @@
   <div class="page page-current">
       <bar v-if="isIndex">
         <bar-item path="/home" label="热门" icon="home"></bar-item>
-        <bar-item path="/tasks" label="精选" icon="tasks"></bar-item>
-        <bar-item path="/list" label="赛事" icon="mytask"></bar-item>
-        <bar-item path="/user" label="分类" icon="me"></bar-item>
-        <bar-item path="/more" label="更多" icon="more"></bar-item>
+        <bar-item path="/cate" label="分类" icon="task"></bar-item>
       </bar>
       <router-view transition="fade" transition-mode="out-in" keep-alive></router-view>
   </div>

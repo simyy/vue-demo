@@ -1054,7 +1054,6 @@ a:active {
 }
 
 .list-block {
-  margin: 1.75rem 0;
   font-size: 0.85rem;
 }
 .list-block ul {
@@ -1458,7 +1457,6 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after, .
   align-items: left;
 }
 .list-block .list-block-label {
-  margin: 0.5rem 0 1.75rem;
   padding: 0 0.75rem;
   font-size: 0.7rem;
   color: #5f646e;

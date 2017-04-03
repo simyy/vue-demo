@@ -17,69 +17,9 @@ export default function (router) {
         require(['./views/home'], resolve)
       }
     },
-    '/list': {
+    '/cate': {
       component (resolve) {
-        require(['./views/list'], resolve)
-      }
-    },
-    '/rank': {
-      component (resolve) {
-        require(['./views/rank'], resolve)
-      }
-    },
-    '/invite': {
-      component (resolve) {
-        require(['./views/invite'], resolve)
-      }
-    },
-    '/tasks': {
-      component (resolve) {
-        require(['./views/tasks'], resolve)
-      }
-    },
-    '/user': {
-      component (resolve) {
-        require(['./views/user'], resolve)
-      }
-    },
-    '/user/tasks': {
-      component (resolve) {
-        require(['./views/user/tasks'], resolve)
-      }
-    },
-    '/user/withdraw': {
-      component (resolve) {
-        require(['./views/user/withdraw'], resolve)
-      }
-    },
-    '/user/profile': {
-      component (resolve) {
-        require(['./views/user/profile'], resolve)
-      }
-    },
-    '/user/profit': {
-      component (resolve) {
-        require(['./views/user/profit'], resolve)
-      }
-    },
-    '/user/profit/record': {
-      component (resolve) {
-        require(['./views/user/profitRecord'], resolve)
-      }
-    },
-    '/more': {
-      component (resolve) {
-        require(['./views/more'], resolve)
-      }
-    },
-    '/more/feedback': {
-      component (resolve) {
-        require(['./views/more/feedback'], resolve)
-      }
-    },
-    '/more/about': {
-      component (resolve) {
-        require(['./views/more/about'], resolve)
+        require(['./views/cate'], resolve)
       }
     }
   })

@@ -1,8 +1,5 @@
 <template>
   <div class="container">
-    <nav class="bar bar-nav">
-      <p class="title">滚动加载更多</p>
-    </nav>
     <div class="content list"
     v-infinite-scroll="loadMore">
       <div class="list-block infinite-list list-items">
@@ -81,7 +78,6 @@ export default {
 
 <style scoped>
 .list-block {
-  margin: .5rem 0;
 }
 .list {
   bottom: 2.5rem;
