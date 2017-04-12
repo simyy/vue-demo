@@ -4,8 +4,8 @@
     <v-tab name="timer-tasks" title="热门" status="active"
     distance="55" v-pull-to-refresh="refreshAll">
       <div class="hot-cate">
-          <v-card-container>
-            <card type="header">cate1</card>
+          <v-card-container v-for="cate in cates | orderBy 'id' 1">
+              <card type="header">{{cate.cate}}</card>
           </v-card-container>
       </div>
     </v-tab>
@@ -42,6 +42,21 @@ export default {
           id: 1,
           title: 'card1',
           content: '这里是第1个card，下拉刷新会出现第2个card'
+        },
+        {
+          id: 1,
+          title: 'card1',
+          content: '这里是第1个card，下拉刷新会出现第2个card'
+        }
+      ],
+      cates: [
+        {
+          id: 1,
+          cate: 'cate1'
+        },
+        {
+          id: 2,
+          cate: 'cate2'
         }
       ]
     }
