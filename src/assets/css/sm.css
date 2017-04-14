@@ -3389,3 +3389,7 @@ html:not(.watch-active-state) .card-header a.link:active, html:not(.watch-active
   -webkit-animation-delay: -0.35s !important;
   animation-delay: -0.35s !important;
 }
+
+.hide {
+    display: none;
+}
