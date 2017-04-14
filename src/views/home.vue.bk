@@ -1,9 +1,23 @@
 <template>
   <div class="container">
-    <div class="content list" v-infinite-scroll="loadMore">
+    <div class="content list"
+    v-infinite-scroll="loadMore">
       <div class="list-block infinite-list list-items">
         <ul>
-          <li v-for="item in items" track-by="$index">{{item.id}}-{{item.name}}</li>
+            <li class="item-content item-content-line" v-for="item in items" track-by="$index">
+            <div class="item-media"><img src="{{item.avatar}}"/></div>
+            <div class="item-inner">
+              <div class="item-desc">
+                <div class="item-desc-title">{{item.name}}-{{item.title}}</div>
+                <div class="item-desc-content">
+                    <div class="item-desc-item">{{item.game}}</div>
+                    <div class="item-desc-item">{{item.audience}}</div>
+                    <div class="item-desc-item">{{item.source}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="item-up"><a href="{{item.url}}">围观</a></div>
+          </li>
         </ul>
       </div>
     </div>
@@ -46,9 +60,6 @@ export default {
     }
   },
   methods: {
-    loadItems () {
-      return []
-    }
     loadMore () {
       if (this.loading) {
         return
@@ -58,20 +69,28 @@ export default {
       loader.show()
       setTimeout(() => {
         let i = this.length
-        // TODO: push items
-        // this.items.push({
-        //   id: i,
-        //   name: `demo${i + 1}`
-        // })
+        this.items.push({
+          id: i,
+          name: `demo${i + 1}`
+        })
         let scrollTop = scroller[0].scrollHeight - scroller.height() - 20
         scroller.scrollTop(scrollTop)
         this.loading = false
         loader.hide()
       }, 1500)
     },
+    onclick (i) {
+      document.getElementById(i).click()
+    }
   }
 }
 </script>
 
 <style scoped>
+.list-block {
+}
+.list {
+  bottom: 2.5rem;
+  padding-bottom: 1rem;
+}
 </style>
