@@ -11,7 +11,7 @@ coverage
 .lock-wscript
 dist/
 .idea
-node_modules
+node_modules/
 .npm
 .node_repl_history
 .swp
