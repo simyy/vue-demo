@@ -14,7 +14,7 @@ export default {
   },
   data () {
     return {
-      message: 'this is home'
+      message: 'this is cate'
     }
   }
 }

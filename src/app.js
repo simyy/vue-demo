@@ -4,6 +4,8 @@ import VueResource from 'vue-resource'
 import * as filters from './filters'
 
 import Home from './views/home'
+import Cate from './views/cate'
+import Main from './main'
 
 
 const Foo = { template: '<div>foo</div>' }
@@ -11,8 +13,9 @@ const Bar = { template: '<div>bar</div>' }
 
 
 const routes = [
-  { path: '/foo', component: Home },
-  { path: '/bar', component: Bar }
+  { path: '/', component: Home },
+  { path: '/cate', component: Cate },
+  { path: '*', component: Home },
 ]
 
 
@@ -26,5 +29,6 @@ const router = new VueRouter({
 })
 
 const app = new Vue({
-    router
+  router,
+  render: h => h(Main),
 }).$mount('#app')
