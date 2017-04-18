@@ -1,7 +1,9 @@
 <template>
+<div class="content native-scroll">
   <div>
     {{message}}
   </div>
+</div>
 </template>
 
 
@@ -14,7 +16,8 @@ export default {
   },
   data () {
     return {
-      message: 'this is cate'
+      message: 'this is cate',
+      isIndex: false
     }
   }
 }

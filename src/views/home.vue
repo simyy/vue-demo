@@ -1,7 +1,9 @@
 <template>
+<div class="content native-scroll">
   <div>
     {{message}}
   </div>
+</div>
 </template>
 
 
