@@ -1,6 +1,6 @@
 <template>
 <div class="page page-current">
-  <search-bar :pre="pre" v-if="isIndex"></search-bar>
+  <search-bar :pre="pre"></search-bar>
   <bar>
     <bar-item path="/home" label="全部" icon="home"></bar-item>
     <bar-item path="/cate" label="分类" icon="menu"></bar-item>
@@ -12,12 +12,14 @@
 <script>
 import Bar from './components/Bar'
 import BarItem from './components/BarItem'
-import SearchBar from './components/SearchBar.vue'
+import SearchBar from './components/SearchBar'
+
+import app from './app'
+
 
 export default {
   data() {
     return {
-      isIndex: true,
       pre: '搜索主播或游戏'
     }
   },
@@ -27,6 +29,9 @@ export default {
     SearchBar
   },
   computed: {
+  },
+  methods: {
   }
 }
+console.log(app)
 </script>

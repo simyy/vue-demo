@@ -14,8 +14,8 @@ const Bar = { template: '<div>bar</div>' }
 
 const routes = [
   { path: '/', component: Home },
+  { path: '/home', component: Home },
   { path: '/cate', component: Cate },
-  { path: '*', component: Home },
 ]
 
 
@@ -26,6 +26,16 @@ Vue.filter('date', filters.dateFilter)
 
 const router = new VueRouter({
   routes
+})
+
+
+router.beforeEach((to, from, next) => {
+  let toPath = to.path
+  let fromPath = from.path
+  console.log(`to: ${toPath} from: ${fromPath}`)
+  router.app.isIndex = toPath === '/' || toPath === '/home'  ? true : false
+  console.log(router.app.isIndex)
+  next()
 })
 
 const app = new Vue({
