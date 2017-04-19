@@ -1,9 +1,7 @@
 <template>
-<div class="content native-scroll">
   <div>
     {{message}}
   </div>
-</div>
 </template>
 
 
@@ -21,6 +19,7 @@ export default {
     }
   },
   created()  {
+    this.$parent.show = false
   }
 }
 </script>

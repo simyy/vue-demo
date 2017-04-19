@@ -1,13 +1,11 @@
 <template>
-<div id="search-bar" class="bar bar-nav">
   <div class="searchbar">
     <a class="searchbar-cancel">取消</a>
     <div class="search-input">
       <label class="icon icon-search" for="search"></label>
-      <input type="search" id='search' :placehoder='pre'/>
+      <input type="search" id='search' :placeholder='pre'/>
     </div>
   </div>
-</div>
 </template>
 
 <script>

@@ -1,18 +1,23 @@
 <template>
 <div class="page page-current">
   <transition name="fade">
-    <search-bar :pre="pre" v-if="show"></search-bar>
+    <div class="bar bar-nav" v-if="show">
+      <search-bar pre="搜索主播或游戏"></search-bar>
+    </div>
   </transition>
-  <bar>
+
+  <nav class="bar bar-tab">
     <bar-item path="/home" label="全部" icon="home"></bar-item>
     <bar-item path="/cate" label="分类" icon="menu"></bar-item>
-  </bar>
-  <router-view transition="fade" transition-mode="out-in" keep-alive></router-view>
+  </nav>
+
+  <div class="content native-scroll">
+    <router-view transition="fade" transition-mode="out-in" keep-alive></router-view>
+  </div>
 </div>
 </template>
 
 <script>
-import Bar from './components/Bar'
 import BarItem from './components/BarItem'
 import SearchBar from './components/SearchBar'
 
@@ -23,11 +28,9 @@ export default {
   data() {
     return {
       show: true,
-      pre: '搜索主播或游戏'
     }
   },
   components: {
-    Bar,
     BarItem,
     SearchBar
   },
