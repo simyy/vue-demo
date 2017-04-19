@@ -1,5 +1,5 @@
 <template>
-<div class="bar bar-nav">
+<div id="search-bar" class="bar bar-nav">
   <div class="searchbar">
     <a class="searchbar-cancel">取消</a>
     <div class="search-input">

@@ -32,9 +32,9 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   let toPath = to.path
   let fromPath = from.path
-  console.log(`to: ${toPath} from: ${fromPath}`)
+  //console.log(`to: ${toPath} from: ${fromPath}`)
   router.app.isIndex = toPath === '/' || toPath === '/home'  ? true : false
-  console.log(router.app.isIndex)
+  //console.log(router.app.isIndex)
   next()
 })
 

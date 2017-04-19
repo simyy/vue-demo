@@ -18,6 +18,8 @@ export default {
     return {
       message: 'this is home'
     }
+  },
+  created() {
   }
 }
 </script>

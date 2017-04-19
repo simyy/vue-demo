@@ -19,6 +19,8 @@ export default {
       message: 'this is cate',
       isIndex: false
     }
+  },
+  created()  {
   }
 }
 </script>
