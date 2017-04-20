@@ -11,7 +11,7 @@
     <bar-item path="/cate" label="分类" icon="menu"></bar-item>
   </nav>
 
-  <div class="content native-scroll">
+  <div class="content" :class="isScroll">
     <router-view transition="fade" transition-mode="out-in" keep-alive></router-view>
   </div>
 </div>
@@ -27,6 +27,7 @@ import app from './app'
 export default {
   data() {
     return {
+      isScroll: true,
       show: true,
     }
   },
