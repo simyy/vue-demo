@@ -5,7 +5,7 @@
       <li class="item-content" v-for="item in items">
         <div class="item-cate">{{item.cate}}</div>
         <div class="item-img">{{item.img}}</div>
-        <div class="item-inner">
+        <div class="item-box">
           <div class="item-title">{{item.title}}</div>
           <div class="item-source">{{item.source}}</div>
         </div>
@@ -24,26 +24,27 @@
 import $ from 'zepto'
 
 export default {
-  ready () {
-    console.log(items)
-    for (let i = 0; i < 10; i++) {
-      this.items.push({
-        cate: 'LOL',
-        img: 'img',
-        title: '标题',
-        source: 'laiyuan'
-      })
-    }
-  },
-  data () {
+  data: function() {
     return {
       loading: false,
       items: []
     }
   },
-  created() {
+  created: function() {
     this.$parent.show = true;
     this.$parent.isScroll = true;
+  },
+  mounted: function() {
+    this.$nextTick(function() {
+      for (let i = 0; i < 10; i++) {
+        this.items.push({
+          cate: 'LOL',
+          img: 'img',
+          title: '标题',
+          source: 'laiyuan'
+        })
+      }
+    })
   }
 }
 </script>
@@ -52,4 +53,5 @@ export default {
 .infinite-scroll-preloader {
   margin-top: -20px;
 }
+
 </style>
