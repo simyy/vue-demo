@@ -1,0 +1,27 @@
+.item-cate {
+  width: 2rem;
+}
+
+.item-img {
+  width: 3rem;
+}
+
+.item-content {
+  flex: 1;
+  padding: 0px;
+}
+
+.item-box {
+  flex: 1;
+  padding: 0px;
+}
+
+.item-title {
+  flex: 1;
+
+}
+
+.item-source {
+  width: 2rem;
+
+}
