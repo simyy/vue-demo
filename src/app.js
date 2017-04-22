@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import * as filters from './filters'
 
+import infiniteScroll from './directives/infiniteScroll'
+import pullToRefresh from './directives/pullToRefresh'
 import Home from './views/home'
 import Cate from './views/cate'
 import Main from './main'
@@ -21,6 +23,9 @@ const routes = [
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
+
+//Vue.directive('pullToRefresh', pullToRefresh)
+Vue.directive('infinite-scroll', infiniteScroll)
 
 Vue.filter('date', filters.dateFilter)
 
