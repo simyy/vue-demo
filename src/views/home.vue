@@ -36,9 +36,9 @@ export default {
   },
   mounted: function() {
     this.$nextTick(function() {
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 15; i++) {
         this.items.push({
-          cate: 'LOL',
+          cate: i + 'LOL',
           img: 'img',
           title: '标题',
           source: 'laiyuan'
@@ -47,23 +47,26 @@ export default {
     })
   },
   methods: {
-    loadMore: function() {
-      console.log('start load')
+    loadMore() {
       if (this.loading) {
         return;
       }
 
+      var _this = this;
       this.loading = true;
       setTimeout(function() {
-        for (let i = 0; i < 10; i++) {
-          this.items.push({
-            cate: 'LOL',
+        console.log('start load')
+        let i = _this.length;
+        for (let j = _this.length; j < i + 15; j++) {
+          _this.items.push({
+            cate: j + 'LOL',
             img: 'img',
             title: '标题',
             source: 'laiyuan'
-          });
+          })
         }
-        this.loading = false;
+        _this.loading = false;
+        console.log('start end')
       }, 1500);
     }
   },
