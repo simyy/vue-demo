@@ -1,7 +1,7 @@
 {
   "name": "vue-demo",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline"
   },
@@ -27,7 +27,7 @@
     "vue-router": "^2.4.0",
     "vue-template-compiler": "^2.2.6",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.2",
+    "webpack-dev-server": "^2.4.3",
     "zepto": "^1.2.0"
   }
 }

@@ -8,9 +8,10 @@ module.exports = {
     app: './src/app.js'
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: './',
-    filename: '[name]-[hash].js'
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '',
+    filename: '[name].js'
+    //filename: '[name]-[hash].js'
   },
   externals: {
     'zepto': 'Zepto'
@@ -63,5 +64,11 @@ module.exports = {
       favicon: 'favicon.ico',
       inject: true
     })
-  ]
+  ],
+  devServer:{
+    historyApiFallback:true,
+    hot:true,
+    inline:true,
+    port:4000 //端口你可以自定义
+  }
 }

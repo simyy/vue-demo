@@ -20,7 +20,6 @@ const routes = [
   { path: '/cate', component: Cate },
 ]
 
-
 Vue.use(VueRouter)
 Vue.use(VueResource)
 
