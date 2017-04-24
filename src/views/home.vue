@@ -3,11 +3,13 @@
   <div class="list-block infinite-list">
     <ul>
       <li class="item-content" v-for="item in items">
-        <div class="item-cate">{{item.cate}}</div>
-        <div class="item-img">{{item.img}}</div>
+        <div class="item-img"><img :src="item.img"/></div>
         <div class="item-box">
           <div class="item-title">{{item.title}}</div>
-          <div class="item-source">{{item.source}}</div>
+          <div class="item-subtitle">
+            <Mlabel :text='item.cate' kind='warn'/>
+            <div class="item-source">{{item.source}}</div>
+          </div>
         </div>
       </li>
     </ul>
@@ -23,6 +25,7 @@
 
 <script>
 import $ from 'zepto'
+import Mlabel from '../components/Label'
 
 export default {
   data: function() {
@@ -39,7 +42,7 @@ export default {
       for (let i = 0; i < 15; i++) {
         this.items.push({
           cate: i + 'LOL',
-          img: 'img',
+          img: '/static/img/avatar.jpg',
           title: '标题',
           source: 'laiyuan'
         })
@@ -60,7 +63,7 @@ export default {
         for (let j = _this.length; j < i + 15; j++) {
           _this.items.push({
             cate: j + 'LOL',
-            img: 'img',
+            img: '/static/img/avatar.jpg',
             title: '标题',
             source: 'laiyuan'
           })
@@ -74,44 +77,67 @@ export default {
     length() {
       return this.items.length
     }
+  },
+  components: {
+    Mlabel
   }
 }
 </script>
 
 <style>
+.list-block {
+  margin: 0rem 0rem 1.75rem 0rem;
+}
+
 .infinite-scroll-preloader {
   margin-top: -20px;
 }
 
 .list-block .item-content {
   padding: 0rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .item-cate {
-  width: 2rem;
-  background-color: red;
+  width: 2.5rem;
 }
 
 .item-img {
   width: 3rem;
-  background-color: yellow;
+  height: 3rem;
+  position: relative;overflow:hidden;
+}
+
+.item-img img {
+  height: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .item-box {
   flex: 1;
   display: flex;
   padding: 0px;
+  flex-direction: column;
 }
 
 .item-title {
   flex: 1;
-  background-color: grey;
+  font-size: 1rem;
+}
+
+.item-subtitle {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.7rem;
 }
 
 .item-source {
   width: 2rem;
-  background-color: blue;
-
 }
 
 </style>

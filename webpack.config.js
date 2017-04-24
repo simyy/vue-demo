@@ -2,6 +2,7 @@ var path = require('path')
 var root = path.resolve(__dirname, './')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var express = require('express')
 
 module.exports = {
   entry: {
@@ -9,7 +10,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '',
+    //publicPath: '/static/',
     filename: '[name].js'
     //filename: '[name]-[hash].js'
   },
