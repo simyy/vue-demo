@@ -43,7 +43,7 @@ export default {
 .m-label {
   color: #fff;
   display: inline;
-  padding: .2rem .2rem .2rem .2rem;
+  padding: .26rem .2rem .2rem .2rem;
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
