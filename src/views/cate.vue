@@ -1,25 +1,31 @@
 <template>
-  <div>
-    {{message}}
+<div>
+  <div v-for="item in items">
+    <Card :title="item.title" :items="item.sub-items"></Card>
   </div>
+</div>
 </template>
 
 
 <script>
 import $ from 'zepto'
+import Card from '../components/Card'
 
 export default {
-  ready () {
-
-  },
   data () {
     return {
-      message: 'this is cate',
-      isIndex: false
+      items: [
+        { title: '标题1', items: ['分类1', '分类2'] },
+        { title: '标题2', items: ['分类3', '分类4'] }
+      ]
+    
     }
   },
   created()  {
-    this.$parent.show = false
+    this.$parent.show = false;
+  },
+  components: {
+    Card
   }
 }
 </script>
